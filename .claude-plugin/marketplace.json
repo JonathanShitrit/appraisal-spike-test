@@ -1,0 +1,11 @@
+{
+  "name": "appraisal-spike-market",
+  "owner": {"name": "Jonathan Shitrit"},
+  "plugins": [
+    {
+      "name": "appraisal-spike",
+      "source": "./appraisal-spike",
+      "description": "Throwaway spike for the plugin packaging plan (Task 0). Delete after use."
+    }
+  ]
+}

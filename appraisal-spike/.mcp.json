@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "browser": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--user-data-dir",
+        "${CLAUDE_PLUGIN_DATA}/profile",
+        "--allowed-origins",
+        "https://example.com;https://github.com"
+      ]
+    }
+  }
+}

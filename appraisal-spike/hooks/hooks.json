@@ -1,0 +1,25 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {"type": "command", "command": "python3 -I \"${CLAUDE_PLUGIN_ROOT}/hooks/spike_hook.py\" session"}
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {"type": "command", "command": "python3 -I \"${CLAUDE_PLUGIN_ROOT}/hooks/spike_hook.py\" guard"}
+        ]
+      },
+      {
+        "matcher": "mcp__.*",
+        "hooks": [
+          {"type": "command", "command": "python3 -I \"${CLAUDE_PLUGIN_ROOT}/hooks/spike_hook.py\" mcp"}
+        ]
+      }
+    ]
+  }
+}
