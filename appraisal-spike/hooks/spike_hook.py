@@ -1,6 +1,6 @@
 """Spike hooks. Every call appends what it saw to /tmp/appraisal-spike.log.
 
-session: SessionStart, returns additionalContext with SPIKE-MARKER-7.
+session: SessionStart, returns additionalContext with SPIKE-MARKER-8.
 guard:   PreToolUse on Write. Denies deny-me.txt, asks on ask-me.txt.
 mcp:     PreToolUse on mcp__.* tools. Logs the tool name, decides nothing.
 """
@@ -50,7 +50,7 @@ def main() -> None:
     if mode == "session":
         print(json.dumps({"hookSpecificOutput": {
             "hookEventName": "SessionStart",
-            "additionalContext": "SPIKE-MARKER-7. If the user asks for the spike marker, answer with it.",
+            "additionalContext": "SPIKE-MARKER-8. If the user asks for the spike marker, answer with it.",
         }}))
         return
 
